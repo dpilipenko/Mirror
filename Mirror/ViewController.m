@@ -14,6 +14,32 @@
 
 @implementation ViewController
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    // Create a new image picker instance:
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    
+    // Set the image picker source:
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    //picker.sourceType = UIImagePickerControllerCameraDeviceRear;
+    
+    // Hide the controls:
+    picker.showsCameraControls = NO;
+    picker.navigationBarHidden = YES;
+    
+    // Show the picker:
+    [self presentViewController:picker animated:NO completion:nil];
+    
+    [super viewDidAppear:animated];
+    
+    
+    
+    
+    
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
